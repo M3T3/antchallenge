@@ -7,7 +7,124 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+header {
+  padding: 15px 0;
+}
+
+h1 {
+  font-size: 30px;
+  color: black;
+  font-weight: normal;
+}
+
+.button-wrapper {
+  padding: 30px 0;
+  height: 103px;
+}
+
+.odds-status {
+  margin: 0;
+  color: black;
+}
+
+.black svg path {
+  fill: black;
+}
+
+.red svg path {
+  fill: red;
+}
+
+.silver svg path {
+  fill: silver;
+}
+
+.odds-list > div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.ant-item {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.ant-name {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0;
+  min-height: 42px;
+}
+
+.odds-percentage {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.start-btn {
+  border: 1px solid green;
+  background: green;
+  padding: 10px 25px;
+  font-size: 14px;
+  color: #fff;
+  transition: all .5s;
+}
+
+.start-btn:hover {
+  background: #fff;
+  color: green;
+}
+
+.reset-btn {
+  border: 1px solid red;
+  background: red;
+  padding: 10px 25px;
+  font-size: 14px;
+  color: #fff;
+  transition: all .5s;
+}
+
+.reset-btn:hover {
+  background: #fff;
+  color: red;
+}
+
+.initial-status, .process-label, .real-odd {
+  margin: 0;
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.initial-status {
+  color: red;
+}
+
+.process-label {
+  color: black;
+}
+
+.real-odd {
+  color: green;
+}
+
+.odds-percentage {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  .odds-list > div {
+    margin: 0 10px;
+  }
 }
