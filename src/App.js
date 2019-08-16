@@ -88,7 +88,7 @@ export default class AntComponent extends React.Component {
   ants(){
     let ants;
     if (this.state.inProgress){
-      ants = Object.keys(this.state.ants).map( i =>{
+      ants = Object.keys(this.state.ants).map( i => {
 
         let odds = this.state.ants[i].likelihoodOfAntWinning;
         let status = <p className="process-label">Calculating</p>;
@@ -97,7 +97,7 @@ export default class AntComponent extends React.Component {
           status = <p className="real-odd">Chance: {parseFloat(odds).toFixed(3)}</p>;
         }
 
-        return (<div className={this.state.ants[i].color.toLowerCase()} key={i}>
+        return (<div className={ this.state.ants[i].color.toLowerCase() } key={i} >
           <CountUp className="odds-percentage" start={0} end={Math.round(odds * 100)} suffix="%" />
           <ul className="ant-item">
             <li className="d-flex justify-content-center">
@@ -152,7 +152,7 @@ export default class AntComponent extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12 d-flex justify-content-center align-items-center">
-                <h1 className="title">Ant Race</h1>
+                <h1 className="title">Ant <span>Race</span></h1>
               </div>
             </div>
           </div>
@@ -161,9 +161,8 @@ export default class AntComponent extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12">
-              <div className="d-flex justify-content-around align-items-center button-wrapper">
+              <div className="d-flex justify-content-center align-items-center">
                 <p className="odds-status text-center">Odds: {this.state.statusMessage}</p>
-                {button}
                 </div>
               </div>
             </div>
@@ -175,6 +174,9 @@ export default class AntComponent extends React.Component {
               <div className="col-12">
                 <div className="odds-list d-flex flex-column flex-md-row">
                   {ants}
+                </div>
+                <div className="d-flex justify-content-center button-wrapper">
+                  {button}
                 </div>
               </div>
             </div>
