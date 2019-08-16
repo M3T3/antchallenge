@@ -152,7 +152,7 @@ export default class AntComponent extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12 d-flex justify-content-center align-items-center">
-                <h1 className="title">Ant <span>Race Challenge</span></h1>
+                <h1 className="title">The <span>Ant Challenge</span></h1>
               </div>
             </div>
           </div>
